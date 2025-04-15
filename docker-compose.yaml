@@ -1,0 +1,11 @@
+networks:
+  nnx:
+    external: true
+services:
+  lobotomy:
+    build: .
+    container_name: lobotomy
+    ports:
+      - "3252:80"
+    networks:
+      - nnx
